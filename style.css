@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    background: url(background.jpg);
+    background-repeat:no-repeat ;
+    background-size:100vw 100vh;
+    height: 100vh;
+}
+.gameOver,#scoreCont{
+    font-weight: bolder;
+}
+
+.text{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+.dino{
+    background: url(dino1.gif);
+    width: 315px;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    /* position absolute will help it move wrt to parent position element that  have any position defined */
+    top:330px;
+    left: 50px;
+}
+.obstacle{
+    background: url('dino2.png');
+    width: 190px;
+    height: 180px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:330px;
+    left:500px;
+}
+.animateDino{
+    animation: dino 0.8s linear;
+}
+
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+@keyframes dino {
+    0%{
+        top:330px;
+    }
+    50%{
+        top:0px;
+    }
+    100%{
+        top:330px;
+    }
+}
+@keyframes obstacleAni{
+    0%{
+        left:100vw;
+
+    }
+    100%{
+        left:-10vw;
+
+    }
+}
